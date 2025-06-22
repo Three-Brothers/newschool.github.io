@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天府新区通用航空职业学院</title>
+    <style>
+        /* body{
+            height: 1000px;
+        } */
+        section{
+            padding: 0 10px;
+            height: 100%;
+            text-align: center;
+        }
+        article{
+            /* padding: 0 6px; */
+            /* display: flex; */
+        }
+        .indent{
+            text-indent: 2em;
+        }
+        s{
+            text-decoration: none;
+            color: #f10215;
+        }
+        table{
+            font-size: 14px;
+            margin: 0 auto;
+        }
+        th,td{
+            padding: 4px 8px;
+            text-align: center;
+        }
+        h1{
+            text-align: center;
+        }
+        h2{
+            cursor: pointer;
+            text-align: center;
+        }
+        section div{
+            display: none;
+        }
+        aside{
+            width: 40px;
+            height: 50px;
+            position: fixed;
+            right: 10px;
+            top: 40px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            text-align: center;
+        }
+        #cls{
+            width: 600px;
+            height: 700px;
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            margin-left: -300px;
+            transition: all 1.5s;
+            border: 1px solid #ccc;
+            background-color: #e1da05;
+        }
+        strong{
+            position: absolute;
+            top: 1px;
+            right: 1px;
+            font-weight: 400;
+            width: 24px;
+            height: 24px;
+            text-align: center;
+            cursor: pointer;
+            color: red;
+            font-size: 18px;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            //设置参数
+            var str = ["保护学校及区域:","眉山天府新区、仁寿县、东坡区、雅安市","简阳区域:简阳初中、石板凳初中、华西九义中学、江源永宁中学","资阳区域:一中、中和、伍隍、二中、保和、丹山、小院、堪嘉、祥符、马鞍、 茶花、临江","武侯区:川大附中系列、石室锦城、四十三中、棕北系列、武侯高级中学、 武侯实验、五七中学、北二外","金牛区：铁中系列、七中通锦、 三十六中、金牛中学","高新区：高新实验、银都紫藤系列","双流区：九江中学、彭镇中学、黄甲中学、公兴中学、永安中学、育人菁英","成华区：七中育才","锦江区：川师外国语","龙泉驿区:经开","洪雅外区：花溪中学、田锡中学、实验初中（保护来访学生，不保护学校）","青神外区：实验初级中学、县中学校、县初级中学校、南城中学（保护来访学生，不保护学校）","彭山：二中、三中","内江：资中二中、威远初中","乐山：嘉州初中"];
+            //获取专业
+            var h2 = document.getElementById("zy");
+            //获取指定的div盒子
+            var div = document.getElementById("tb");
+            h2.addEventListener("click",function(){
+                if(div.style.display == "block"){
+                    div.style.display = "none";
+                }else{
+                    div.style.display = "block";
+                }
+            },false);
+            //获取固定定位的盒子
+            var flexBox = document.querySelector("aside");
+            //点击盒子弹框
+            flexBox.addEventListener("click",function(){
+                //先判断body中有没有这个标签，如果有则删除，无则创建
+                if(document.getElementById("cls")){
+                    document.body.removeChild(document.getElementById("cls"));
+                }
+                //创建div，并吧div插入到body的最后面
+                var dv = document.createElement("Article");
+                dv.id = "cls";
+                document.body.appendChild(dv);
+                //创建一个小的盒子
+                var box = document.createElement("strong");
+                box.id="off";
+                box.innerHTML = "X";
+                dv.appendChild(box);
+                //点击按钮，让盒子关闭
+                box.addEventListener("click",function(){
+                    //点击按钮的时候，通过body找到id为cls的元素，并删除掉。
+                    document.body.removeChild(document.getElementById("cls"))
+                },false);
+
+                //创建p元素，并追加到dv中
+                for(var i = 0; i < str.length; i++){
+                    //创建p标签
+                    var p = document.createElement("p");
+                    p.innerHTML = str[i];
+                    dv.appendChild(p);
+                }
+            },false);
+            
+        };
+    </script>
+</head>
+<body>
+    <section>
+        <h1>天府新区通用航空职业学院</h1>
+        <h2>学校简介</h2>
+            <p class="indent">天府新区通用航空职业学院是经<s>四川省人⺠政府批准</s>，<s>教育部备案</s>的<s>非营利性全日制</s>普通<s>高等学校</s>，是中国<s>第一所通用航空职业学院</s>，
+            现已逐步建设成为<s>低空经济引领者和通用航空新高地</s>。学院坐落于国家级新区⸺<s>天府新区</s>，区位优势明显，<s>校园环境优美，设施设备一流。校园由清华大学建筑设计院设计</s>，
+            <s>占地 1100余亩</s>，建筑<s>面积约35万平方米</s>，拥有<s>业内独有455平方公里训练空域</s>。现有<s>在校生15000余人</s>。学校紧密围绕产业布局和市场需求设置专业，现设有31个专业，
+            40余个专业方向，形成了“以通用航空相关专业为引领，运输航空相关专业为主干，电子信息、智能制造和现代服务相关专业为支撑”的专业集群协调发展的专业建设格局。专业涵盖交通运输大类、装备
+            制造大类、电子与信息大类、财经商贸大类、教育与体育大类、医药卫生大类等。学校坚持以“德育为魂、质量为先、特色为要、就业为重”的办学理念，形成了“一个目标、两个路径、三个环节、四个课堂
+            、五个支撑”的特色人才培养模式，<s>培养“1+X”复合型人才</s>，使学生做到一专多能。学校以“办百年名校，育通航英才”为愿景，立足高等职业教育，扎根天府新区，服务成德眉资同城化发展和成渝
+            双城经济圈建设，辐射西南，走向世界致力于把学校建设成为有质量、有特色、有品牌、有良好社会影响力的高职院校。</p>
+            <p class="indent">天府新区通用航空职业学院中职部与<s>眉山机电职业技术学校</s>合署办公，一校两牌。<s>学校创办于1974年</s>，原为<s>国家邮电部主办</s>的<s>邮电通信技工学校505技校</s>。
+            学校办学历史悠久，职教文化深厚，先后被省、市、区评为先进办学单位。</p>
+            <p class="indent">中毕业生报读我校中职部<s>前三年注册全日制中职学籍</s>，<s>中职毕业</s>后以<s>参加四川省单招考试</s>、<s>对口高职考试</s>等方式<s>进入我校高职学院</s>学习，毕业后取
+            得<s>全日制大专文凭</s>。中职部现开设有计算机应用、数字媒体技术应用、无人机操控与维护、⻜机设备维修、航空服务、城市轨道交通运营服务、机电技术应用、汽⻋制造与检测、新能源汽⻋制造与检测、休闲体育服务与
+            管理、智慧健康养老服务、⺟婴照护、应急救援技术等13个大类专业。现有在校生3000余人，教职工150余人。</p>
+            <p class="indent">天府新区通用航空职业学院中职部，重点打造中、高职贯通办学模式，充分发挥专业共建和产业人才培养基地的作用，凭借天府新区通用航空职业学院的办学优势，联合国内外优质
+            企业和省内外重点本科院校，为学生创造理想的升学通道和就业机会。</p>
+        <h2 id="zy">专业及收费标准</h2>
+        <div id ="tb">
+        <table border="" cellpadding="0" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th rowspan="2">类别</th>
+                        <th rowspan="2">学制</th>
+                        <th rowspan="2">专业名称</th>
+                        <th rowspan="2">学费(元/学年)</th>
+                        <th rowspan="2">住宿费(元/学年)</th>
+                        <th colspan="6">代管费(元/学年)</th>
+                        <th rowspan="2">费用合计</th>
+                    </tr>
+                    <tr>
+                        <th>教材</th>
+                        <th>床上用品</th>
+                        <th>体检费</th>
+                        <th>学平险/意外保险</th>
+                        <th>体能训练</th>
+                        <th>素质拓展</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="13">通航中职部</td>
+                        <td rowspan="3">三年制高考升学班</td>
+                        <td>无人机操控与维护</td>
+                        <td rowspan="3">9000</td>
+                        <td rowspan="3">1200</td>
+                        <td rowspan="3">600</td>
+                        <td rowspan="3">480</td>
+                        <td rowspan="3">150</td>
+                        <td rowspan="3">150</td>
+                        <td rowspan="3">600</td>
+                        <td rowspan="3">/</td>
+                        <td rowspan="3">12180</td>
+                    </tr>
+                    <tr>
+                        <td>飞机设备维修</td>
+                    </tr>
+                    <tr>
+                        <td>新能源汽车制造与检测</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="10">五年一贯制</td>
+                        <td>护理</td>
+                        <td rowspan="10">8800</td>
+                        <td rowspan="10">1200</td>
+                        <td rowspan="10">600</td>
+                        <td rowspan="10">480</td>
+                        <td rowspan="10">150</td>
+                        <td rowspan="10">150</td>
+                        <td rowspan="10">600</td>
+                        <td rowspan="10">/</td>
+                        <td rowspan="10">11980</td>
+                    </tr>
+                    <tr>
+                        <td>婴幼儿托育</td>
+                    </tr>
+                    <tr>
+                        <td>无人机操控与维护</td>
+                    </tr>
+                    <tr>
+                        <td>新能源汽车制造与检测</td>
+                    </tr>
+                    <tr>
+                        <td>飞机设备维修</td>
+                    </tr>
+                    <tr>
+                        <td>航空服务</td>
+                    </tr>
+                    <tr>
+                        <td>计算机应用</td>
+                    </tr>
+                    <tr>
+                        <td>数字媒体应用技术</td>
+                    </tr>
+                    <tr>
+                        <td>电子商务</td>
+                    </tr>
+                    <tr>
+                        <td>会计事务</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="14">眉山机电校</td>
+                        <td rowspan="14">三年制高考升学班</td>
+                        <td>民航运输服务</td>
+                        <td rowspan="13">9000</td>
+                        <td rowspan="13">1200</td>
+                        <td rowspan="13">600</td>
+                        <td rowspan="13">480</td>
+                        <td rowspan="13">150</td>
+                        <td rowspan="13">150</td>
+                        <td rowspan="13">600</td>
+                        <td rowspan="13">/</td>
+                        <td rowspan="13">12180</td>
+                    </tr>
+                    <tr>
+                        <td>民航运输服务</td>
+                    </tr>
+                    <tr>
+                        <td>电子商务</td>
+                    </tr>
+                    <tr>
+                        <td>计算机应用</td>
+                    </tr>
+                    <tr>
+                        <td>数字媒体应用技术</td>
+                    </tr>
+                    <tr>
+                        <td>城市轨道交通运营管理</td>
+                    </tr>
+                    <tr>
+                        <td>汽车制造与检测</td>
+                    </tr>
+                    <tr>
+                        <td>无人机操控与维护</td>
+                    </tr>
+                    <tr>
+                        <td>机电技术应用</td>
+                    </tr>
+                    <tr>
+                        <td>应急救援技术</td>
+                    </tr>
+                    <tr>
+                        <td>航空服务</td>
+                    </tr>
+                    <tr>
+                        <td>休闲体育服务与管理</td>
+                    </tr>
+                    <tr>
+                        <td>智慧健康养老服务</td>
+                    </tr>
+                    <tr>
+                        <td>普职融通班(重点本科)</td>
+                        <td>9000</td>
+                        <td>1200</td>
+                        <td>600</td>
+                        <td>480</td>
+                        <td>150</td>
+                        <td>150</td>
+                        <td>600</td>
+                        <td>2000</td>
+                        <td>14180</td>
+                    </tr>
+                </tbody>
+        </table>
+        </div>
+    </section>
+    
+    <aside>保护学校</aside>
+</body>
+</html>
