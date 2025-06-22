@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中专政策统计</title>
+    <style>
+        h1{
+            text-align: center;
+            color: #333;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        s{
+            text-decoration: none;
+            color: #f10215;
+        }
+        nav{
+            display: flex;
+            border-bottom : 1px solid #ccc;
+        }
+        nav li{
+            list-style: none;
+            float: left;
+            margin-right: 20px;
+            font-size: 18px;
+            font-weight: 700;
+            height: 40px;
+            line-height: 40px;
+            margin-left: 80px;
+        }
+        nav a{
+            text-decoration: none;
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            //获取所有的p标签
+            var Pobj = document.querySelectorAll('p');
+            //遍历所有的p标签
+            for(var i = 0; i < Pobj.length; i++){
+                //把p标签改为行内块
+                Pobj[i].style.display = 'inline-block';
+                //鼠标进入p标签的时候显示下划线，下划线颜色为红色
+                Pobj[i].onmouseover = function(){
+                    this.style.textDecoration = 'underline';
+                    this.style.backgroundColor = 'yellow';
+                    this.style.cursor = 'pointer'; // 鼠标变为手形
+                };
+                //鼠标离开p标签的时候隐藏下划线
+                Pobj[i].onmouseout = function(){
+                    // 隐藏下划线
+                    this.style.textDecoration = 'none';
+                    this.style.backgroundColor = 'transparent';
+                    this.style.cursor = 'default'; // 鼠标变为默认形状
+                };
+            }
+            //当页面卷曲出去超过100px的时候，nav标签固定在顶部，当页面回到顶部的时候，nav标签恢复原位
+            var nav = document.querySelector('nav');
+            window.onscroll = function(){
+                if(document.body.scrollTop > 140 || document.documentElement.scrollTop > 140){
+                    nav.style.position = 'fixed';
+                    nav.style.top = '0';
+                    nav.style.left = '0';
+                    nav.style.right = '0';
+                    nav.style.zIndex = '1000';
+                    nav.style.backgroundColor = '#fff'; // 设置背景颜色
+                    
+                }else{
+                    nav.style.position = 'static';
+                }
+            };
+
+            //获取nav标签下的所有的li标签
+            var liObj = document.querySelectorAll('nav li');
+            //遍历所有的li标签
+            for(var i = 0; i < liObj.length; i++){
+                //鼠标进入li标签的时候，a标签下的文字颜色变为红色
+                liObj[i].onmouseover = function(){
+                    this.querySelector('a').style.color = '#f10215';
+                    this.querySelector('a').style.textDecoration = 'underline'; // 添加下划线
+                };
+                //鼠标离开li标签的时候，a标签下的文字颜色恢复原状
+                liObj[i].onmouseout = function(){
+                    this.querySelector('a').style.color = '#333';
+                    this.querySelector('a').style.textDecoration = 'none'; // 移除下划线
+                };
+                //
+            }
+        };
+    </script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="https://three-brothers.github.io/cdxx.edu.cn/" target="_blank">成都信息技术学校</a>
+            </li>
+            <li>
+                <a href="#">四川城市职业学院</a>
+            </li>
+            <li>
+                <a href="#">天府新区通用航空职业学院</a>
+            </li>
+            <li>
+                <a href="#">五月花技师学院</a>
+            </li>
+            <li>
+                <a href="https://three-brothers.github.io/hslg.github.io/" target="_blank">成都华商理工职业学校</a>
+        </ul>
+    </nav><br />
+    <h1>政策区分</h1>
+    <ol>
+        <li>
+            <h3>职教高考政策</h3>
+            <p>职教高考（职业教育高考）是区别于普通高考的,高等院校招生考试制度，专门<s>面向职业教育学生</s>（如中专、技校、职高毕业生）设计，旨在<s>培养应用型高技能</s>人才。</p><br />
+            <p>四川省2025年的<s>中专分流</s>是<s>3/7分</s>,<s>3成</s>的学生<s>上高中</s>,<s>7成</s>的学生<s>上职校</s></p><br />
+            <p>1.职教高考分数组成: <s>总分750分 (语文150分,数学150分,英语100分(无听力)+专业技能350)</s></p><br />
+            <p>职教高考改革<s>政策25年开始落地!</s></p><br />
+            <p>原意:<s>职教本科招生</s>规模<s>不低于</s>当年高等<s>职业教育</s>招生规模的<s>10%(24年四川高等职业教育招生规模40万以上)</s></p><br />
+            <p><s>2025年</s>开始到<s>2028年</s>职教本科<s>预计录取40000以上</s>(24年6323人,23年3760人,22年2950人)</p><br />
+            <p>2.<s>学校</s>扩建支持:到<s>2025年</s>四川省将<s>增加15所本科院校</s>录取<s>职教高考</s>本科学生</p><br />
+            <p>(1)职教高考:<s>山东24年录取2.2万人、重庆录取6428人、四川6323人</s></p><br />
+            <p>3.职教高考<s>优势</s></p><br />
+            <p>(1)<s>职教高考</s>升学班<s>高于普高班</s>、<s>教学计划不低于普高班</s>、而且<s>有350分</s>的<s>专业分加持</s>、这是<s>普高没有</s>的</p><br />
+            <p>(2)<s>升学班2000课时</s>以上、超过<s>普通高中课时1800</s>,<s>师资力量雄厚、管理严格</s>、不像<s>普通班要去上班实习1年</s>或以上</p><br />
+            <p>(3)<s>本科升学率达到80%</s>以上、<s>最差</s>也能上<s>公办专科</s>、或者<s>可以复读一年</s></p><br />
+            
+            <p>(4)不但可以<s>参加春季高考</s>、和<s>秋季的普通高考</s>。<s>一样可以升学</s>,并且<s>分数要求更低</s>,<s>全新的赛道</s>。</p><br />
+            <p>矮子里拔高个原理、只要<s>努力上本科</s>问题不大</p><br />
+        </li>
+        <li>
+            <h3>新高考模式和传统高考<s>区别</s></h3>
+            <h4>传统高考模式</h4>
+            <p>传统高考模式是指<s>以"3+文化综合/理科综合"为核心</s>的考试制度，主要<s>特点包括文理分科、固定科目组合和统一计分方式</s>。</p><br />
+            <p><s>文史类:</s> 政治、历史、地理。组成"文综"(总分300分)</p><br />
+            <p><s>理工类:</s> 物理、化学、生物。组成"理综"(总分300分)</p><br />
+
+             <h4>新高考模式</h4>
+            <p>新高考模式是指<s>以"3+1+2"为核心的考试制度</s>，主要特点包括<s>科目选择灵活、综合素质评价</s>和<s>多元录取</s>方式。</p><br />
+            <p>科目选择: 学生可以根据<s>自己的兴趣和特长</s>选择科目，增加了<s>选考科目的灵活性</s>。</p><br />
+            <p><s>"3":全国统考科目</s></p><br />
+            <p>[a] 科目: 语文、数学、外语(英语、日语、俄语等)</p><br />
+            <p>[b] 单科满分150分</p><br />
+            <p>注意: 以原始分计入高考总分。</p><br />
+            <p><s>"1":首选科目</s></p><br />
+            <p>[a]: 科目: 历史、物理</p><br />
+            <p>[b]: 以上科目任选一门</p><br />
+            <p>[c]: 单科满分100分</p><br />
+            <p>注意: 以原始分计入高考总分</p><br />
+            <p><s>"2":第二选科目</s></p><br />
+            <p>[a] 科目: 生物、化学、地理、政治</p><br />
+            <p>[b] 以上科目任选两门</p><br />
+            <p>[c] 单科满分100分</p><br />
+            <p>注意: 此项通过登记赋分转换标准分后计入总成绩</p><br />
+            <p>原始分按比例划分A-E五档</p><br />
+            <p>占比约15%、35%、35%、13%、2%</p><br />
+            <p>对应转换到:</p><br />
+            <p>100-86、85-71、70-56、55-41、40-30区间</p><br />
+        </li>
+    </ol>
+    
+</body>
+</html>
