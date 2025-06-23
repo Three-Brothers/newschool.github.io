@@ -5,18 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>天府新区通用航空职业学院</title>
     <style>
-        /* body{
-            height: 1000px;
-        } */
+
         section{
             padding: 0 10px;
             height: 100%;
             text-align: center;
         }
-        article{
-            /* padding: 0 6px; */
-            /* display: flex; */
-        }
+
         .indent{
             text-indent: 2em;
         }
@@ -29,7 +24,7 @@
             margin: 0 auto;
         }
         th,td{
-            padding: 4px 8px;
+            padding: 2px 4px;
             text-align: center;
         }
         h1{
@@ -54,15 +49,11 @@
             text-align: center;
         }
         #cls{
-            width: 600px;
-            height: 700px;
-            position: absolute;
-            top: 10%;
-            left: 50%;
-            margin-left: -300px;
-            transition: all 1.5s;
-            border: 1px solid #ccc;
+            width: 350px;
+            height: 550px; 
             background-color: #e1da05;
+            font-size: 12px;
+            padding: 10px;  
         }
         strong{
             position: absolute;
@@ -75,6 +66,13 @@
             cursor: pointer;
             color: red;
             font-size: 18px;
+        }
+        .cs :first-child{
+            width: 20px;
+            Flex-wrap: wrap;
+        }
+        .cs :nth-child(4){
+            width: 20px;
         }
     </style>
     <script>
@@ -122,9 +120,13 @@
                     p.innerHTML = str[i];
                     dv.appendChild(p);
                 }
+                //此时让dv这个盒子始终在浏览器的中间位置显示
+                dv.style.position = "fixed";
+                dv.style.top = "50%";
+                dv.style.left = "50%";
+                dv.style.transform = "translate(-50%,-50%)";
             },false);
-            
-        };
+        }
     </script>
 </head>
 <body>
@@ -149,7 +151,7 @@
         <div id ="tb">
         <table border="" cellpadding="0" cellspacing="0">
                 <thead>
-                    <tr>
+                    <tr class="cs">
                         <th rowspan="2">类别</th>
                         <th rowspan="2">学制</th>
                         <th rowspan="2">专业名称</th>
@@ -160,15 +162,15 @@
                     </tr>
                     <tr>
                         <th>教材</th>
-                        <th>床上用品</th>
+                        <th>床上<br/>用品</th>
                         <th>体检费</th>
-                        <th>学平险/意外保险</th>
-                        <th>体能训练</th>
-                        <th>素质拓展</th>
+                        <th>学平险<br/>意外保险</th>
+                        <th>体能<br/>训练</th>
+                        <th>素质<br/>拓展</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr class="cs">
                         <td rowspan="13">通航中职部</td>
                         <td rowspan="3">三年制高考升学班</td>
                         <td>无人机操控与维护</td>
@@ -188,7 +190,7 @@
                     <tr>
                         <td>新能源汽车制造与检测</td>
                     </tr>
-                    <tr>
+                    <tr class="cs">
                         <td rowspan="10">五年一贯制</td>
                         <td>护理</td>
                         <td rowspan="10">8800</td>
@@ -228,7 +230,7 @@
                     <tr>
                         <td>会计事务</td>
                     </tr>
-                    <tr>
+                    <tr class="cs">
                         <td rowspan="14">眉山机电校</td>
                         <td rowspan="14">三年制高考升学班</td>
                         <td>民航运输服务</td>
