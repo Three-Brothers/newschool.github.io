@@ -81,6 +81,24 @@
     </style>
     <script>
         window.onload = function(){
+            // 检测是否为手机浏览器
+            function isMobile() {
+                return /Mobi|Android/i.test(navigator.userAgent);
+            }
+            // 如果是手机浏览器，设置页面尺寸
+            if (isMobile()) {
+                document.documentElement.style.width = '370px';
+                document.documentElement.style.height = '650px';
+                // 设置viewport以适应手机屏幕
+                document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=370, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+            } else {
+                // 如果不是手机浏览器，设置页面尺寸为默认值
+                document.documentElement.style.width = '1024px';
+                document.documentElement.style.height = '768px';
+                document.documentElement.style.margin = '0 auto';
+                // 设置viewport以适应桌面屏幕
+                document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=1024, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+            }
             //设置参数
             var str = ["保护学校及区域:","眉山天府新区、仁寿县、东坡区、雅安市","简阳区域:简阳初中、石板凳初中、华西九义中学、江源永宁中学","资阳区域:一中、中和、伍隍、二中、保和、丹山、小院、堪嘉、祥符、马鞍、 茶花、临江","武侯区:川大附中系列、石室锦城、四十三中、棕北系列、武侯高级中学、 武侯实验、五七中学、北二外","金牛区：铁中系列、七中通锦、 三十六中、金牛中学","高新区：高新实验、银都紫藤系列","双流区：九江中学、彭镇中学、黄甲中学、公兴中学、永安中学、育人菁英","成华区：七中育才","锦江区：川师外国语","龙泉驿区:经开","洪雅外区：花溪中学、田锡中学、实验初中（保护来访学生，不保护学校）","青神外区：实验初级中学、县中学校、县初级中学校、南城中学（保护来访学生，不保护学校）","彭山：二中、三中","内江：资中二中、威远初中","乐山：嘉州初中"];
             //获取专业
