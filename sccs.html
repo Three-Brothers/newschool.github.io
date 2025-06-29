@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>四川城市职业学院</title>
+    <link rel="icon" type="image/x-icon" href="faviconcs.ico">
+    <style>
+        /* 页面基本样式 */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+        }
+        h1{
+            text-align: center;
+            color: #4CAF50;
+            margin-top: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p{
+            text-indent: 2em;
+        }
+        /*让所有的内容居中显示*/
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .teachers {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .teachers li {
+            float: left;
+            list-style: none;
+            padding: 0;
+            width: 200px;
+            height: 200px;
+            border: 1px solid #ccc;
+            margin: 10px 0;
+            margin-left: 10px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+            padding: 0 5px;
+            cursor: pointer;
+        }
+        .teachers h3{
+            color: red;
+        }
+        .teachers p{
+            text-indent: 2em;
+            text-align: left;
+        }
+        s{
+            text-decoration: none;
+            color: #f10215;
+        }
+        article{
+            font-weight: 700;
+        }
+        table{
+            text-align: center;
+        }
+        table tbody tr:last-child{
+            text-align: left;
+        }
+        li{
+
+        }
+    </style>
+    <script>
+        // 检测是否为手机浏览器
+        function isMobile() {
+            return /Mobi|Android/i.test(navigator.userAgent);
+        }
+
+        // 如果是手机浏览器，设置页面尺寸
+        if (isMobile()) {
+            document.documentElement.style.width = '370px';
+            document.documentElement.style.height = '650px';
+            // 设置viewport以适应手机屏幕
+            document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=370, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+        } else {
+            // 如果不是手机浏览器，设置页面尺寸为默认值
+            document.documentElement.style.width = '1024px';
+            document.documentElement.style.height = '768px';
+            document.documentElement.style.margin = '0 auto';
+            // 设置viewport以适应桌面屏幕
+            document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=1024, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+        }
+    </script>
+</head>
+<body>
+    <h1>四川城市职业学院</h1>
+    <h2>学校简介</h2>
+    <p>四川城市职业学院是经四川省人民政府批准，在四川城市职业学院基础上增挂的民办学院，是具备中等职业学历教育的全日制普通高等院校。</p>
+    <p>学校全面贯彻党的教育方针，实行全封闭、住宿制管理，为学校学历和技能提升提供多种途径、实行学制教育与职业培训并举、学校教育与企业培养相结合的办学模式，重点培养适应四川省和成都市社会经济发展的高素质技术技能人才。</p>
+    <p>学校占地面积58.98万平方米，校舍建筑总面积舍面积35.11万平方米，教学、实训仪器设备资产总值达到1.5亿元人民币，图书馆藏书156余万册。</p>
+    <p>学校形成了交通类、医药类、教育类、建筑类、信息类、机械类10个专业大类共31个招生专业，现有全日制在校生11000余人。</p>
+    <h2>师资力量</h2>
+    <p>学校师资力量雄厚，有各类专兼职教师1056人，其中高级职称教师416人，本科及以上学历教师1032人(其中硕士及以上学位教师616人)、双师型(一体化)教师660人;拥有"全国技术能手"2人、"四川省技工教育表现优秀个人"7人、"四川省技工教育表现优秀的教育工作者"2人、四川省"想带职教之星"4人、"成都市技术能手"8人、"成都市特级教师"1人、"成都市优秀青年教师"1人、"成都市教坛新秀"2人、"成都市技工院校优秀班主任"1人。</p>
+    <div class="teachers">
+        <ul>
+            <li>
+                <h3>刘芸汐</h3>
+                <strong>博士</strong>
+                <p>城市建设与设计学院教师、参与建设课程思政师范教学团队</p>
+            </li>
+
+            <li>
+                <h3>罗吉</h3>
+                <strong>管理学博士</strong>
+                <p>世界职业学院技能大赛国赛裁判、全国轨道交通专业评审委员会讲师、四川省工业发展执行项目评审专家</p>
+            </li>
+            
+            <li>
+                <h3>付雨</h3>
+                <strong>医学博士</strong>
+                <p>副主任中医师、荣获四川省教学成果二等奖、获奖"优秀指导教师"等荣誉称号</p>
+            </li>
+            <li>
+                <h3>林琳</h3>
+                <strong>教授</strong>
+                <p>四川省职业指导专家、川渝人才库专家、四川省教学能力大赛专家</p>
+            </li>
+            <li>
+                <h3>刘英</h3>
+                <strong>教授</strong>
+                <p>四川省工艺美术行业协会特聘专家、四川省旅游学等智库专家</p>
+            </li>
+            <li>
+                <h3>王正科</h3>
+                <strong>副教授</strong>
+                <p>全国技术能手、四川省技能人才创新工作室负责人、四川省技能竞赛优秀教练</p>
+            </li>
+            <li>
+                <h3>李多萃</h3>
+                <strong>教授</strong>
+                <p>四川省技工教育优秀教师、四川省国赛集训班专家、第三届全国技能院校教师职业能力大赛班主任赛一等奖</p>
+            </li>
+            <li>
+                <h3>彭飞</h3>
+                <strong>高级工程师</strong>
+                <p>中国建筑学会中国土木工程学会会员、四川美术家协会会员</p>
+            </li>
+        </ul>
+    </div>
+    <h2>专业设置</h2>
+    <p></p>
+    <table border="1" cellpadding="0" cellspacing="0">
+        <caption>幼儿教育、室内设计、会计、工程造价、新能源汽车制造与装配、城市轨道交通运输与管理城市轨道交通车辆运用与检修、计算机应用与维修、<s>护理</s>、建筑施工、服装设计与制作、汽车维修、电子商务、<s>航空服务</s>、数控加工、<s>药物制剂</s>、现代物流、铁道运输管理、家政服务、楼宇自动控制设备安装与维护、计算机广告制作、工业机器人应用与维护、计算机动画制作、机电一体化技术、平面设计、老年服务与管理、音乐、电子竞技运动服务与管理、<s>宠物医疗与护理</s></caption>
+        <thead>
+            <tr>
+                <th>专业名称</th>
+                <th>学费</th>
+                <th>住宿</th>
+                <th>杂费</th>
+                <th>学平险</th>
+                <th>服装费</th>
+                <th>合计</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>普通专业</td>
+                <td>9800</td>
+                <td>1200</td>
+                <td>720</td>
+                <td>150</td>
+                <td>695</td>
+                <td>12565</td>
+            </tr>
+            <tr>
+                <td>国防教育特色班</td>
+                <td>12800</td>
+                <td>1200</td>
+                <td>600</td>
+                <td>150</td>
+                <td>695</td>
+                <td>15745</td>
+            </tr>
+            <tr>
+                <td colspan="7">
+                    <p>(一)、<article>普通专业杂费</article>包括600元、新生体检费120元、学平险150元/3年、校服费695元(夏季两套、秋季两套、防寒服一套)</p>
+                    <p>(二)、<article>国防教育特色班杂费</article>包括:教材费600元、学平险150元/3年、被服费2890(共45件)</p>
+                    <p>(三)、成都市城乡居民基本医疗保险入学后单独购买,收费标准以2024年社保局文件为准,第二学年及后续学年所收费用在第一学年的费用上扣除体检费、服装费;学生的一卡通制作费由后勤公司按标准另行收取;学生的其他日常开支由学生自理。</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
